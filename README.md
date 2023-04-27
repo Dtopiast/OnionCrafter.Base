@@ -1,5 +1,6 @@
 # OnionCrafter.Base
 ![](https://github.com/Dtopiast/OnionCrafter.Base/blob/main/LogoMakr-3fgVzt.png)
+
 OnionCrafter.Base es una librería de código libre desarrollada en .NET 7 para facilitar la implementación de la arquitectura Onion en cualquier proyecto y mejorar la seguridad de las aplicaciones desde el principio gracias a las características de seguridad basadas en tipos fuertemente tipados.
 
 La arquitectura Onion, también conocida como arquitectura hexagonal, es una forma de diseñar sistemas que los hace más escalables, flexibles y fáciles de mantener a largo plazo. OnionCrafter.Base incluye clases e interfaces base para entidades, configuraciones, validaciones, servicios, repositorios, DTOs, excepciones y wrappers, lo que permite la reutilización y reimplementación de código.
