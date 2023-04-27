@@ -10,7 +10,7 @@ La librería OnionCrafter.Base también utiliza otras tecnologías como Automapper,
 
 OnionCrafter.Base incluye las siguientes características:
 
-- Implementación de la arquitectura Onion.
+- Implementación de la arquitectura Onion
 - Seguridad basada en tipos fuertemente tipados.
 - Clases e interfaces base para la reutilización y reimplementación.
 - Incorporación de otras tecnologías como Automapper, FluentValidation y MediatR.
