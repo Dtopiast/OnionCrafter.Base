@@ -59,5 +59,5 @@ Si deseas contribuir con el proyecto, por favor lee nuestras [directrices de con
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT - lee el archivo [LICENSE](LICENSE.txt)
+Este proyecto está licenciado bajo la Licencia Apache 2.0 - lee el archivo [LICENSE](LICENSE.txt)
  para más detalles.
