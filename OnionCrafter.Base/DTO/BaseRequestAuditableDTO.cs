@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace OnionCrafter.Base.DTO
 {
-    public abstract class BaseRequestAuditableDTO
+    public abstract class BaseRequestAuditableDTO : IAuditableDTO
     {
+        public DateTime Created { get; set; }
+        public DateTime Updated { get; set; }
     }
 }
