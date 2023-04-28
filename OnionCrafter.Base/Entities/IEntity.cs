@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace OnionCrafter.Base.Entities
 {
-    public class BaseAuditableEntity<TKey> : IAuditableEntity<TKey>
+    public interface IEntity<TKey> 
     {
         public TKey Id { get; set; }
-    }
-    public class BaseAuditableEntity : IAuditableEntity<string>
-    {
-        public string Id { get; set; }
-
     }
 }
