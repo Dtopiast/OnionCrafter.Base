@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnionCrafter.Base.DTO
 {
-    public abstract class BaseResponseDTO
+    public abstract class BaseResponseDTO : IDTO
     {
     }
 }
