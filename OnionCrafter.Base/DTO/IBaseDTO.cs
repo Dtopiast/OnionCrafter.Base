@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnionCrafter.Base.DTO
 {
-    public interface IDTO
+    public interface IBaseDTO
     {
     }
 }
