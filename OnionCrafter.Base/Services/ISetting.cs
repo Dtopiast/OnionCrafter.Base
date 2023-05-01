@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnionCrafter.Base.Services
 {
-    internal interface ISetting
+    public interface ISetting
     {
     }
 }
