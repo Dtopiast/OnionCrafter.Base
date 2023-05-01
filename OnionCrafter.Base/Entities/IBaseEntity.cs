@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnionCrafter.Base.Entities
 {
-    public class IBaseEntity
+    public interface IBaseEntity
     {
     }
 }
