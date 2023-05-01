@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace OnionCrafter.Base.Services
 {
+    public interface IService<TServiceOptions> : IBaseService
+        where TServiceOptions : IServiceOptions
+    {
+    }
+
     public interface IService : IBaseService
     {
     }
