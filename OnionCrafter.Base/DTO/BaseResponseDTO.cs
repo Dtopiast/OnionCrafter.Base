@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OnionCrafter.Base.Wrappers.Responses;
 
 namespace OnionCrafter.Base.DTO
 {
-    public abstract class BaseResponseDTO : IDTO
+    public abstract class BaseResponseDTO : IBaseDTO, IResponseData
     {
     }
 }

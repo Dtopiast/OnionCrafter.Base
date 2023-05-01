@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OnionCrafter.Base.Wrappers.Requests;
 
 namespace OnionCrafter.Base.DTO
 {
-    public abstract class BaseRequestDTO : IDTO
+    public abstract class BaseRequestDTO : IBaseDTO, IRequestData
     {
-        
     }
 }
