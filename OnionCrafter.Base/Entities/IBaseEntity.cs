@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnionCrafter.Base.Entities
 {
-    public interface IEntity<TKey> : IBaseEntity
+    public class IBaseEntity
     {
-        public TKey Id { get; set; }
     }
 }
