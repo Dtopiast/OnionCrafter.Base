@@ -44,16 +44,56 @@ Puedes descargar el paquete desde la sección de [releases](https://github.com/D
 
 Para utilizar OnionCrafter.Base en tu proyecto, debes agregar la referencia al paquete y utilizar las clases e interfaces base incluidas en la librería. También debes implementar las tecnologías incorporadas como MediatR.
 
+Se mostrara la creacion de un servicio llamado MyService que requiere ser configurado para ser implementado.
+
+Se crea la clase de configuracion que hereda de IServiceOptions que necesita una key para una api
 ```csharp
-// Ejemplo de uso de OnionCrafter.Base
-using OnionCrafter.Base.Entities;
 using OnionCrafter.Base.Services;
 
-public class UserService : BaseService<User>
+public class MyServiceOptions : IServiceOptions
 {
-    // Implementación del servicio de usuarios utilizando OnionCrafter.Base
+    public string ApiKey { get; set; }
 }
 ```
+
+Se crea la interfaz que usara la implementacion del servicio, esta hedera de IService y lleva un parametro generico con la clase de opciones que usa (este puede no necesitar).
+```csharp
+using OnionCrafter.Base.Services;
+
+public interface MyService : IService<MyServiceOptions>
+{
+    public void Send();
+}
+```
+
+Implementacion del servicio en una clase que obtiene acceso directo a las opciones de configuracion.
+```csharp
+using OnionCrafter.Base.Services;
+
+public class MyImplementationService : MyService
+{
+    public MyImplementationService(IOptions<MyServiceOptions> options) 
+    {
+        _config = options.Value;
+    }  
+    public void Send()
+    {
+    // Implementación del servicio  utilizando OnionCrafter.Base
+    }
+    
+}
+```
+
+Se registra el servicio en el startup.
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddTypedScopedWithOptions(typeof(MyService), typeof(MyImplementationService), opt=>
+{
+    opt.ApiKey = "YOUR_API_KEY";
+});
+//...
+```
+
 
 ## Contribuciones
 
