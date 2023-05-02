@@ -1,7 +1,7 @@
 [![.NET Core](https://github.com/Dtopiast/OnionCrafter.Base/workflows/.NET%20Core/badge.svg)](https://github.com/Dtopiast/OnionCrafter.Base/actions)
 
 # OnionCrafter.Base
-![](https://github.com/Dtopiast/OnionCrafter.Base/blob/main/images/Logo.png)
+![](https://github.com/Dtopiast/OnionCrafter.Base/blob/main/Images/Logo.png)
 
 OnionCrafter.Base es una librería de código libre desarrollada en .NET 7 para facilitar la implementación de la arquitectura Onion en cualquier proyecto y mejorar la seguridad de las aplicaciones desde el principio gracias a las características de seguridad basadas en tipos fuertemente tipados.
 
