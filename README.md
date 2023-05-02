@@ -87,7 +87,7 @@ public class MyImplementationService : MyService
 Se registra el servicio en el startup.
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
-Builder.Services.AddTypedScopedWithOptions(typeof(MyService), typeof(MyImplementationService), opt=>
+builder.Services.AddTypedScopedWithOptions(typeof(MyService), typeof(MyImplementationService), opt=>
 {
     opt.ApiKey = "YOUR_API_KEY";
 });
