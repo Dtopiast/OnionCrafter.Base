@@ -1,4 +1,4 @@
-﻿namespace OnionCrafter.Base.Wrappers.Requests.Query
+﻿namespace OnionCrafter.Base.Wrappers.Requests
 {
     public interface ICacheableRequestSchema
     {
