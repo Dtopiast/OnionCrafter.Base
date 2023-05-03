@@ -2,7 +2,7 @@
 
 namespace OnionCrafter.Base.DTO
 {
-    public interface IAuditableDTO : IAuditableClass
+    public interface IAuditableDTO : IBaseDTO, IAuditableClass
     {
     }
 }
