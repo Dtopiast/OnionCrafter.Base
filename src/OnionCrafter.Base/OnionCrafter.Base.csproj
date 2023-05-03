@@ -4,7 +4,20 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Description>provides a set of minimal base classes to enable fast and secure implementation of entities, services, wrappers and other necessary components within an onion architecture, uses Mediatr to implement the Mediator pattern. </Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageIcon>Logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/Dtopiast/OnionCrafter.Base</RepositoryUrl>
+    <PackageTags>DDD Onion </PackageTags>
+    <Authors>Dtopiast</Authors>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\test\Pictures\Logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.0.1" />
