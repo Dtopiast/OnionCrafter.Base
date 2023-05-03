@@ -2,7 +2,7 @@
 
 namespace OnionCrafter.Base.Wrappers.Requests
 {
-    public interface IRequestSchema<TKey, TResponseSchema, TResponseData, TRequestData> : IBaseRequest
+    public interface IRequestSchema<TKey, TResponseSchema, TResponseData, TRequestData> : MediatR.IRequest<TResponseSchema>, IBaseRequest
         where TResponseSchema : IResponseSchema<TKey, TResponseData>
         where TResponseData : IResponseData
         where TRequestData : IRequestData
