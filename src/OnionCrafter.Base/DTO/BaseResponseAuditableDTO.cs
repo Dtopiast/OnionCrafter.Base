@@ -2,9 +2,7 @@
 
 namespace OnionCrafter.Base.DTO
 {
-    public abstract class BaseResponseAuditableDTO : BaseResponseDTO, IAuditableDTO
+    public abstract class BaseResponseAuditableDTO : BaseAuditableDTO
     {
-        public DateTime Created { get; set; }
-        public DateTime Updated { get; set; }
     }
 }

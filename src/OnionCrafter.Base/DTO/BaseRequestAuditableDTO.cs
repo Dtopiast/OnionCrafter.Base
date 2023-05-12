@@ -1,8 +1,8 @@
-﻿namespace OnionCrafter.Base.DTO
+﻿using OnionCrafter.Base.Wrappers.Requests;
+
+namespace OnionCrafter.Base.DTO
 {
-    public abstract class BaseRequestAuditableDTO : BaseRequestDTO, IAuditableDTO
+    public abstract class BaseRequestAuditableDTO : BaseAuditableDTO, IRequestData
     {
-        public DateTime Created { get; set; }
-        public DateTime Updated { get; set; }
     }
 }
