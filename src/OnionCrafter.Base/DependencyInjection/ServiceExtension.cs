@@ -1,10 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using OnionCrafter.Base.Services;
 using System.Diagnostics.CodeAnalysis;
 
-namespace OnionCrafter.Base.Services
+namespace OnionCrafter.Base.DependencyInjection
 {
-    public static class ServiceCollectionExtension
+    public static class ServiceExtension
     {
         public static IServiceCollection AddTypedScoped<TService, TImplementation>(this IServiceCollection services)
             where TService : IService
@@ -106,7 +107,7 @@ namespace OnionCrafter.Base.Services
             services.AddOptions<TOptions>().Configure(configure);
             var descriptor = new ServiceDescriptor(serviceType, implementationType, lifetime);
             services.Add(descriptor);
-            Func<IServiceProvider, TOptions> addOptionDI = (IServiceProvider provider) =>
+            Func<IServiceProvider, TOptions> addOptionDI = (provider) =>
             {
                 var options = provider.GetRequiredService<IOptions<TOptions>>();
                 return options.Value;
