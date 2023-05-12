@@ -1,9 +1,10 @@
-﻿namespace OnionCrafter.Base.Wrappers.Responses
+﻿using OnionCrafter.Base.Wrappers.Common;
+
+namespace OnionCrafter.Base.Wrappers.Responses
 {
-    public interface IResponseSchema<TKey, TResponseData>
+    public interface IResponseSchema<TKey, TResponseData> : IActionTrace<TKey>
         where TResponseData : IResponseData
     {
-        public TKey ActionId { get; set; }
         public DateTime TimeStamp { get; set; }
         public bool Succeeded { get; set; }
         public string Message { get; set; }
