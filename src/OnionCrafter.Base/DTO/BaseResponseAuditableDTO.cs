@@ -2,7 +2,7 @@
 
 namespace OnionCrafter.Base.DTO
 {
-    public abstract class BaseResponseAuditableDTO : BaseAuditableDTO
+    public abstract class BaseResponseAuditableDTO : BaseAuditableDTO, IResponseData
     {
     }
 }
