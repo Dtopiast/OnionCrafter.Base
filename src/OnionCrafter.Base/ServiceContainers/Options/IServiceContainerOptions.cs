@@ -1,4 +1,5 @@
-﻿using OnionCrafter.Base.Services.Options;
+﻿using OnionCrafter.Base.Commons;
+using OnionCrafter.Base.Services.Options;
 
 namespace OnionCrafter.Base.ServiceContainers.Options
 {
@@ -6,8 +7,8 @@ namespace OnionCrafter.Base.ServiceContainers.Options
     /// Provides options for configuring a service container, including whether to use a logger and logger options.
     /// </summary>
     /// <typeparam name="TLoggerOptions">The type of logger options to use.</typeparam>
-    public interface IServiceContainerOptions<TLoggerOptions> where: IUselogger
-    where TLoggerOptions : class, IServiceContainerLoggerOptions
+    public interface IServiceContainerOptions<TLoggerOptions> : IUseLogger
+        where TLoggerOptions : class, IServiceContainerLoggerOptions
     {
         /// <summary>
         /// Gets or sets the logger options to use.
