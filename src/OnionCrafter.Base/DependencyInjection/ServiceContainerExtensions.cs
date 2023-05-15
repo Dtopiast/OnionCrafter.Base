@@ -7,7 +7,7 @@ namespace OnionCrafter.Base.DependencyInjection
     /// <summary>
     /// Extension methods for <see cref="IServiceCollection"/> to register custom service containers.
     /// </summary>
-    public static class ServiceContainerExtension
+    public static class ServiceContainerExtensionS
     {
         /// <summary>
         /// Adds a service container to the service collection with the specified options and logging options.
