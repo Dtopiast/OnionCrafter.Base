@@ -63,6 +63,9 @@ namespace OnionCrafter.Base.Services
         /// Disposes the service asynchronously.
         /// </summary>
         public abstract ValueTask DisposeAsync();
+
+        public abstract void LogAction<TServiceAction>(bool actionResult, TServiceAction action, params object?[] args)
+            where TServiceAction : struct, Enum;
     }
 
     /// <summary>

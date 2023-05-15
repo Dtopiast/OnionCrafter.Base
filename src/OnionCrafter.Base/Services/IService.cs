@@ -8,6 +8,9 @@ namespace OnionCrafter.Base.Services
     public interface IService : IBaseService
     {
         public string Name { get; protected set; }
+
+        public abstract void LogAction<TActions>(bool actionResult, TActions action, params object?[] args)
+            where TActions : struct, Enum;
     }
 
     /// <summary>
