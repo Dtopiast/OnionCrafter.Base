@@ -1,32 +1,64 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnionCrafter.Base.Entities
+﻿namespace OnionCrafter.Base.Entities
 {
-    public class BaseAuditableEntity<TKey> : IAuditableEntity<TKey>
+    /// <summary>
+    /// Base class for auditable entities with a given key type.
+    /// Implements the IAuditableEntity interface.
+    /// </summary>
+    /// <typeparam name="TKey">The type of the entity's primary key.</typeparam>
+    public abstract class BaseAuditableEntity<TKey> : IAuditableEntity<TKey>
+    where TKey : notnull, IEquatable<TKey>, IComparable<TKey>
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseAuditableEntity{TKey}"/> class.
+        /// </summary>
         protected BaseAuditableEntity()
         {
             Id = Activator.CreateInstance<TKey>();
         }
 
-        public TKey Id { get; set; }
+        /// <summary>
+        /// Gets or sets the date the entity was created.
+        /// </summary>
         public DateTime Created { get; set; }
+
+        /// <summary>
+        /// Gets or sets the entity's primary key.
+        /// </summary>
+        public TKey Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the date the entity was last updated.
+        /// </summary>
         public DateTime Updated { get; set; }
     }
 
-    public class BaseAuditableEntity : IAuditableEntity<string>
+    /// <summary>
+    /// Base class for auditable entities with a string primary key.
+    /// Implements the IAuditableEntity interface.
+    /// </summary>
+    public abstract class BaseAuditableEntity : IAuditableEntity
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseAuditableEntity"/> class.
+        /// </summary>
         protected BaseAuditableEntity()
         {
             Id = string.Empty;
         }
 
-        public string Id { get; set; }
+        /// <summary>
+        /// Gets or sets the date the entity was created.
+        /// </summary>
         public DateTime Created { get; set; }
+
+        /// <summary>
+        /// Gets or sets the entity's primary key.
+        /// </summary>
+        public string Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the date the entity was last updated.
+        /// </summary>
         public DateTime Updated { get; set; }
     }
 }
