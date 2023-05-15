@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OnionCrafter.Base.Commons;
 
 namespace OnionCrafter.Base.Services
 {
-    public interface IBaseService
+    /// <summary>
+    /// Base interface for a service.
+    /// </summary>
+    public interface IBaseService : IAsyncDisposable, IClonable<IService>
     {
     }
 }
