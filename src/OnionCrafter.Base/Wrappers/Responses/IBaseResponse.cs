@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnionCrafter.Base.Wrappers.Responses
+﻿namespace OnionCrafter.Base.Wrappers.Responses
 {
+    /// <summary>
+    /// Interface for defining the base response for a request.
+    /// </summary>
     public interface IBaseResponse
     {
     }
