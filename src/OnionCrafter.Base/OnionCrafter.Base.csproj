@@ -4,15 +4,29 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Description>provides a set of minimal base classes to enable fast and secure implementation of entities, services, wrappers and other necessary components within an onion architecture, uses Mediatr to implement the Mediator pattern. </Description>
-    <PackageProjectUrl></PackageProjectUrl>
+    <Description>Provides a set of minimal base classes to enable fast and secure implementation of Entities, DTOs, Wrappers for requests and responses and other necessary components within an onion architecture, uses Mediatr to implement the Mediator pattern. </Description>
+    <PackageProjectUrl>https://www.nuget.org/packages/OnionCrafter.Base/</PackageProjectUrl>
     <PackageIcon>Logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/Dtopiast/OnionCrafter.Base</RepositoryUrl>
-    <PackageTags>DDD Onion </PackageTags>
+    <PackageTags>DDD onion-arquitecture mediatr automation wrappers response-schemas request-schemas</PackageTags>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+	  <VersionPrefix>1.0.1</VersionPrefix>
     <Authors>Dtopiast</Authors>
+    <RepositoryType>git</RepositoryType>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Title>OnionCrafter.Base</Title>
+    <IncludeSymbols>True</IncludeSymbols>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Copyright>Copyright 2023 Dtopiast</Copyright>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="C:\Users\test\Pictures\Logo.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -21,7 +35,9 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
   </ItemGroup>
 

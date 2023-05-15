@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnionCrafter.Base.Wrappers.Requests
+﻿namespace OnionCrafter.Base.Wrappers.Requests
 {
+    /// <summary>
+    /// Interface for request data.
+    /// </summary>
     public interface IRequestData
     {
     }
