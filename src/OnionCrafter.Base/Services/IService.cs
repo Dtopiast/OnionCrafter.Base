@@ -8,6 +8,7 @@ namespace OnionCrafter.Base.Services
     /// </summary>
     public interface IService : IBaseService
     {
+        public string Name { get; protected set; }
     }
 
     /// <summary>

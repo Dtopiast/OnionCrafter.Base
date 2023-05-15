@@ -35,7 +35,7 @@ namespace OnionCrafter.Base.ServiceContainers
             Config = containerConfig.Get(Name);
             _services = new Dictionary<TKey, TValue>();
             _logger = logger;
-            LoggerUtils.CheckLoggerImplementation(_logger, Config.UseLogger);
+            _logger.CheckLoggerImplementation(Config.UseLogger);
         }
 
         /// <summary>
