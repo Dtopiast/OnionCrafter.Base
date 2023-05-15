@@ -94,32 +94,8 @@ namespace OnionCrafter.Base.DependencyInjection
             EnsureValidServiceTypes(serviceType, implementationType);
 
             services.AddOptions<TOptions>().Configure(configure);
-            var descriptor = new ServiceDescriptor(serviceType, implementationType, lifetime);
-            services.Add(descriptor);
-            Func<IServiceProvider, TOptions> addOptionDI = (provider) =>
-            {
-                var options = provider.GetRequiredService<IOptions<TOptions>>();
-                return options.Value;
-            };
-            switch (lifetime)
-            {
-                case ServiceLifetime.Singleton:
-                    services.AddSingleton(addOptionDI);
-                    break;
-
-                case ServiceLifetime.Scoped:
-                    services.AddScoped(addOptionDI);
-
-                    break;
-
-                case ServiceLifetime.Transient:
-                    services.AddTransient(addOptionDI);
-
-                    break;
-
-                default:
-                    break;
-            }
+            var descriptorService = new ServiceDescriptor(serviceType, implementationType, lifetime);
+            services.Add(descriptorService);
             return services;
         }
 
