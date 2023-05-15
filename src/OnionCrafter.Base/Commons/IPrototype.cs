@@ -4,7 +4,7 @@
     /// Represents an interface for cloning objects of a specific type.
     /// </summary>
     /// <typeparam name="T">The type of the object to be cloned.</typeparam>
-    public interface IClonable<T>
+    public interface IPrototype<T>
     {
         /// <summary>
         /// Creates a shallow copy of the object.
