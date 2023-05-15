@@ -1,15 +1,15 @@
-﻿namespace OnionCrafter.Base.Services.Options
+﻿using OnionCrafter.Base.Commons;
+
+namespace OnionCrafter.Base.Services.Options
 {
     /// <summary>
     /// Interface for service options.
     /// </summary>
-    public interface IServiceOptions
+    public interface IServiceOptions : IUseLogger
     {
         /// <summary>
-        /// Gets or sets a value indicating whether to use a logger.
+        /// Property to get and set the service name.
         /// </summary>
-        public bool UseLogger { get; set; }
-
         public string? SetServiceName { get; set; }
     }
 }
