@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnionCrafter.Base.Entities
+﻿namespace OnionCrafter.Base.Entities
 {
     /// <summary>
     /// Represents an entity with a unique identifier of type <typeparamref name="TKey"/>.

@@ -1,5 +1,4 @@
 ﻿using OnionCrafter.Base.Commons;
-using OnionCrafter.Base.Services.Options;
 
 namespace OnionCrafter.Base.ServiceContainers.Options
 {
