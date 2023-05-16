@@ -1,4 +1,5 @@
 [![.NET Core](https://github.com/Dtopiast/OnionCrafter.Base/workflows/.NET%20Core/badge.svg)](https://github.com/Dtopiast/OnionCrafter.Base/actions)
+[![NuGet](https://img.shields.io/nuget/v/OnionCrafter.Base.svg)](https://www.nuget.org/packages/OnionCrafter.Base/)
 
 # OnionCrafter.Base
 ![](https://github.com/Dtopiast/OnionCrafter.Base/blob/main/Images/Logo.png)
