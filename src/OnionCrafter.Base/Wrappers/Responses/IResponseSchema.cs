@@ -3,12 +3,13 @@
 namespace OnionCrafter.Base.Wrappers.Responses
 {
     /// <summary>
-    /// Represents a response schema. Inherits from <see cref=" IActionTrace<TKey>"/>.
+    /// Represents a response schema. Inherits from <see cref=" IActionTrace{TKey}"/>.
     /// </summary>
     /// <typeparam name="TKey">The type of the action ID.</typeparam>
     /// <typeparam name="TResponseData">The type of the response data.</typeparam>
     public interface IResponseSchema<TKey, TResponseData> : IActionTrace<TKey>
             where TResponseData : IResponseData
+        where TKey : notnull, IEquatable<TKey>, IComparable<TKey>
     {
         /// <summary>
         /// Gets or sets the feature call associated with the response.

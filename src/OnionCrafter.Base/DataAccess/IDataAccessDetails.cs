@@ -28,7 +28,7 @@
     /// </summary>
     public interface IDataAccessDetails
     {
-        // <summary>
+        /// <summary>
         /// Gets the level of data access privileges.
         /// </summary>
         public DataAccesssPrivilegesLevel DataAccesssPrivilegesLevel { get; }

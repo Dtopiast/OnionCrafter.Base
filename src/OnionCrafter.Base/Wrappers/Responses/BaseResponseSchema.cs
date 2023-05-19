@@ -9,6 +9,7 @@
     public abstract class BaseResponseSchema<TKey, TResponseData>
         : IResponseSchema<TKey, TResponseData>
         where TResponseData : IResponseData
+        where TKey : notnull, IEquatable<TKey>, IComparable<TKey>
     {
         /// <summary>
         /// Initializes a new instance of the BaseResponseSchema class.

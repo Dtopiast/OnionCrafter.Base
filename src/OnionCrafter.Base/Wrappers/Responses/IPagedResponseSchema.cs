@@ -7,6 +7,7 @@
     /// <typeparam name="TResponseData">The type of the response data.</typeparam>
     public interface IPagedResponseSchema<TKey, TResponseData> : IResponseSchema<TKey, TResponseData>
         where TResponseData : IResponseData
+        where TKey : notnull, IEquatable<TKey>, IComparable<TKey>
     {
         /// <summary>
         /// Gets or sets the URI of the first page.

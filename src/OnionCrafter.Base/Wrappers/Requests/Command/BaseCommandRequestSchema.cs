@@ -13,6 +13,8 @@ namespace OnionCrafter.Base.Wrappers.Requests.Command
             where TResponseSchema : IResponseSchema<TKey, TReturnData>
             where TReturnData : IResponseData
             where TRequestData : IRequestData
+            where TKey : notnull, IEquatable<TKey>, IComparable<TKey>
+
     {
         /// <summary>
         /// Protected parameterless constructor for BaseCommandRequestSchema class.
