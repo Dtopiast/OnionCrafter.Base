@@ -6,10 +6,10 @@
     <Nullable>enable</Nullable>
     <Description>Provides a set of minimal base classes to enable fast and secure implementation of Entities, DTOs, Wrappers for requests and responses and other necessary components within an onion architecture, uses Mediatr to implement the Mediator pattern. </Description>
     <PackageProjectUrl>https://www.nuget.org/packages/OnionCrafter.Base/</PackageProjectUrl>
-    <PackageIcon>Logo.png</PackageIcon>
+    <PackageIcon>JustLogo.png</PackageIcon>
     <RepositoryUrl>https://github.com/Dtopiast/OnionCrafter.Base</RepositoryUrl>
     <PackageTags>DDD onion-arquitecture mediatr automation wrappers response-schemas request-schemas</PackageTags>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
 	  <VersionPrefix>1.0.1</VersionPrefix>
     <Authors>Dtopiast</Authors>
     <RepositoryType>git</RepositoryType>
@@ -27,7 +27,7 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="C:\Users\test\Pictures\Logo.png">
+    <None Include="..\..\Images\JustLogo.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
