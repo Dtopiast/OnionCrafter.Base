@@ -24,13 +24,8 @@
     /// <summary>
     /// Abstract base class for entities with a string key.
     /// </summary>
-    public abstract class BaseEntity : IEntity
+    public abstract class BaseEntity : BaseEntity<string>, IEntity
     {
-        /// <summary>
-        /// Gets or sets the entity's key.
-        /// </summary>
-        public virtual string Id { get; set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseEntity"/> class.
         /// </summary>
