@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -9,8 +9,7 @@
     <PackageIcon>JustLogo.png</PackageIcon>
     <RepositoryUrl>https://github.com/Dtopiast/OnionCrafter.Base</RepositoryUrl>
     <PackageTags>DDD onion-arquitecture mediatr automation wrappers response-schemas request-schemas</PackageTags>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
-	  <VersionPrefix>1.0.1</VersionPrefix>
+	  <VersionPrefix>1.0.2</VersionPrefix>
     <Authors>Dtopiast</Authors>
     <RepositoryType>git</RepositoryType>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
@@ -20,6 +19,8 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Copyright>Copyright 2023 Dtopiast</Copyright>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
