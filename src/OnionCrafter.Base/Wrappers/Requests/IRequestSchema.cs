@@ -14,6 +14,7 @@ namespace OnionCrafter.Base.Wrappers.Requests
         where TResponseSchema : IResponseSchema<TKey, TResponseData>
         where TResponseData : IResponseData
         where TRequestData : IRequestData
+        where TKey : notnull, IEquatable<TKey>, IComparable<TKey>
     {
         /// <summary>
         /// Gets or sets the request data.

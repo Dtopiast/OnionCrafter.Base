@@ -36,7 +36,7 @@
     /// Base class for auditable entities with a string primary key.
     /// Implements the IAuditableEntity interface.
     /// </summary>
-    public abstract class BaseAuditableEntity : IAuditableEntity
+    public abstract class BaseAuditableEntity : BaseAuditableEntity<string>, IAuditableEntity
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseAuditableEntity"/> class.
@@ -45,20 +45,5 @@
         {
             Id = string.Empty;
         }
-
-        /// <summary>
-        /// Gets or sets the date the entity was created.
-        /// </summary>
-        public DateTime Created { get; set; }
-
-        /// <summary>
-        /// Gets or sets the entity's primary key.
-        /// </summary>
-        public string Id { get; set; }
-
-        /// <summary>
-        /// Gets or sets the date the entity was last updated.
-        /// </summary>
-        public DateTime Updated { get; set; }
     }
 }

@@ -9,10 +9,10 @@ namespace OnionCrafter.Base.Wrappers.Requests.Query
     /// <typeparam name="TResponseSchema">The type for the response schema.</typeparam>
     /// <typeparam name="TReturnData">The type for the response data.</typeparam>
     /// <typeparam name="TRequestData">The type for the request data.</typeparam>
-    public abstract class BaseQueryRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData> : BaseRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData>, IQueryRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData>
-            where TResponseSchema : IResponseSchema<TKey, TReturnData>
-            where TReturnData : IResponseData
-            where TRequestData : IRequestData
+    public abstract class BaseQueryRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData> : BaseRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData>, IQueryRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData>        where TResponseSchema : IResponseSchema<TKey, TReturnData>
+        where TReturnData : IResponseData
+        where TRequestData : IRequestData
+        where TKey : notnull, IEquatable<TKey>, IComparable<TKey>
     {
         /// <summary>
         /// Determines whether to bypass the cache for this request.

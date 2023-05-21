@@ -9,6 +9,7 @@
         BaseResponseSchema<TKey, TResponseData>,
         IPagedResponseSchema<TKey, TResponseData>
         where TResponseData : IResponseData
+        where TKey : notnull, IEquatable<TKey>, IComparable<TKey>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BasePagedResponseSchema{TKey, TResponseData}"/> class with the specified page number and page size.

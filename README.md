@@ -1,6 +1,8 @@
-[![.NET Core](https://github.com/Dtopiast/OnionCrafter.Base/workflows/.NET%20Core/badge.svg)](https://github.com/Dtopiast/OnionCrafter.Base/actions)
 
 # OnionCrafter.Base
+
+[![NuGet](https://img.shields.io/nuget/v/OnionCrafter.Base.svg)](https://www.nuget.org/packages/OnionCrafter.Base/)
+
 ![](https://github.com/Dtopiast/OnionCrafter.Base/blob/main/Images/Logo.png)
 
 OnionCrafter.Base es una librería desarrollada en .NET 7 que proporciona un conjunto de clases base minimalistas para habilitar la implementación rápida y segura de Entidades, DTOs, Envoltorios para solicitudes y respuestas y otros componentes necesarios dentro de una arquitectura de cebolla. Esta librería utiliza MediatR para implementar el patrón Mediator, lo que hace que el código sea más escalable y mantenible.
