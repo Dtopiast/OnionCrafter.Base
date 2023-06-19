@@ -1,16 +1,17 @@
 ﻿using OnionCrafter.Base.Wrappers.Responses;
 
-namespace OnionCrafter.Base.Wrappers.Requests.Command
+namespace OnionCrafter.Base.Wrappers.Requests.Query
 {
     /// <summary>
-    /// Represents a command request schema. Inherits from IRequestSchema.
+    /// Represents an interface for paged query request schemas.
     /// </summary>
-    /// <typeparam name="TKey">The type of the action ID.</typeparam>
+    /// <typeparam name="TKey">The type of the key.</typeparam>
     /// <typeparam name="TResponseSchema">The type of the response schema.</typeparam>
     /// <typeparam name="TReturnData">The type of the return data.</typeparam>
     /// <typeparam name="TRequestData">The type of the request data.</typeparam>
-    public interface ICommandRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData> :
-        IRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData>
+    public interface IPagedQueryRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData> :
+        IQueryRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData>,
+        IPagedRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData>
         where TResponseSchema : IResponseSchema<TKey, TReturnData>
         where TReturnData : IResponseData
         where TRequestData : IRequestData

@@ -1,6 +1,4 @@
-﻿using OnionCrafter.Base.Wrappers.Responses;
-
-namespace OnionCrafter.Base.Utils
+﻿namespace OnionCrafter.Base.Utils
 {
     /// <summary>
     /// This static class provides extension methods for various types.

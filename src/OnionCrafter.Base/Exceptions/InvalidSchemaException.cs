@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnionCrafter.Base.Exceptions
+﻿namespace OnionCrafter.Base.Exceptions
 {
     /// <summary>
     /// Represents an exception that is thrown when an invalid schema is encountered.

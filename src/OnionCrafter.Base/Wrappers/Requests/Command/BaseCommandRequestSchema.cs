@@ -9,7 +9,9 @@ namespace OnionCrafter.Base.Wrappers.Requests.Command
     /// <typeparam name="TResponseSchema">The type of the response schema.</typeparam>
     /// <typeparam name="TReturnData">The type of the return data.</typeparam>
     /// <typeparam name="TRequestData">The type of the request data.</typeparam>
-    public abstract class BaseCommandRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData> : BaseRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData>, ICommandRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData>
+    public abstract class BaseCommandRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData> :
+        BaseRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData>,
+        ICommandRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData>
             where TResponseSchema : IResponseSchema<TKey, TReturnData>
             where TReturnData : IResponseData
             where TRequestData : IRequestData
