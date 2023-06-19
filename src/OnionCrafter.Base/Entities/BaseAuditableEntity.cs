@@ -22,11 +22,6 @@
         public DateTime Created { get; set; }
 
         /// <summary>
-        /// Gets or sets the entity's primary key.
-        /// </summary>
-        public TKey Id { get; set; }
-
-        /// <summary>
         /// Gets or sets the date the entity was last updated.
         /// </summary>
         public DateTime Updated { get; set; }
