@@ -5,7 +5,8 @@ namespace OnionCrafter.Base.DTOs
     /// <summary>
     /// Represents an interface for an auditable Data Transfer Object (DTO) that includes auditing properties.
     /// </summary>
-    public interface IAuditableDTO : IBaseDTO, IAuditableClass
+    public interface IBaseAuditableDTO :
+        IBaseDTO, IAuditableClass
     {
     }
 }

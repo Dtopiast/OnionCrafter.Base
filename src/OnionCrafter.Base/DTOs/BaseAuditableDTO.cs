@@ -3,7 +3,8 @@
     /// <summary>
     /// Abstract base class for an auditable Data Transfer Object (DTO).
     /// </summary>
-    public abstract class BaseAuditableDTO : IAuditableDTO
+    public abstract class BaseAuditableDTO :
+        BaseDTO, IBaseAuditableDTO
     {
         /// <summary>
         /// Gets or sets the created date and time.
