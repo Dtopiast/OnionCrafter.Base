@@ -26,6 +26,7 @@ OnionCrafter.Base requiere:
 
 - .NET 7 o superior.
 - MediatR versión 9 o superior.
+- AutoMapper.
 
 ## Instalación
 
