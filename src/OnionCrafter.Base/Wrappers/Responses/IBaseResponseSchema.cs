@@ -3,7 +3,7 @@
     /// <summary>
     /// Interface for defining the base response for a request.
     /// </summary>
-    public interface IBaseResponse
+    public interface IBaseResponseSchema
     {
     }
 }

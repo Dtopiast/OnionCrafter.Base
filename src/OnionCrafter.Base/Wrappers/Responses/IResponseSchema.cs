@@ -7,8 +7,10 @@ namespace OnionCrafter.Base.Wrappers.Responses
     /// </summary>
     /// <typeparam name="TKey">The type of the action ID.</typeparam>
     /// <typeparam name="TResponseData">The type of the response data.</typeparam>
-    public interface IResponseSchema<TKey, TResponseData> : IActionTrace<TKey>
-            where TResponseData : IResponseData
+    public interface IResponseSchema<TKey, TResponseData> :
+        IBaseResponseSchema,
+        IActionTrace<TKey>
+        where TResponseData : IResponseData
         where TKey : notnull, IEquatable<TKey>, IComparable<TKey>
     {
         /// <summary>

@@ -3,7 +3,7 @@
     /// <summary>
     /// Interface representing a base request.
     /// </summary>
-    public interface IBaseRequest : MediatR.IBaseRequest
+    public interface IBaseRequestSchema : MediatR.IBaseRequest
     {
     }
 }

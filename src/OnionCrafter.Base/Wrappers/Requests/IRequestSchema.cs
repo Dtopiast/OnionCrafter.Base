@@ -1,4 +1,5 @@
-﻿using OnionCrafter.Base.Commons;
+﻿using MediatR;
+using OnionCrafter.Base.Commons;
 using OnionCrafter.Base.Wrappers.Responses;
 
 namespace OnionCrafter.Base.Wrappers.Requests
@@ -10,7 +11,12 @@ namespace OnionCrafter.Base.Wrappers.Requests
     /// <typeparam name="TResponseSchema">The type of the response schema.</typeparam>
     /// <typeparam name="TResponseData">The type of the response data.</typeparam>
     /// <typeparam name="TRequestData">The type of the request data.</typeparam>
-    public interface IRequestSchema<TKey, TResponseSchema, TResponseData, TRequestData> : MediatR.IRequest<TResponseSchema>, IBaseRequest, IActionTrace<TKey>, ICopyable<IRequestSchema<TKey, TResponseSchema, TResponseData, TRequestData>>, ICopyable<TResponseSchema>
+    public interface IRequestSchema<TKey, TResponseSchema, TResponseData, TRequestData> :
+        ICopyable<IRequestSchema<TKey, TResponseSchema, TResponseData, TRequestData>>,
+        ICopyable<TResponseSchema>,
+        IRequest<TResponseSchema>,
+        IBaseRequestSchema,
+        IActionTrace<TKey>
         where TResponseSchema : IResponseSchema<TKey, TResponseData>
         where TResponseData : IResponseData
         where TRequestData : IRequestData
