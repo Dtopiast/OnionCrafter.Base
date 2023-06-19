@@ -14,27 +14,27 @@ namespace OnionCrafter.Base.Wrappers.Responses
         /// <summary>
         /// Gets or sets the feature call associated with the response.
         /// </summary>
-        public string FeatureCall { get; set; }
+        public string FeatureCall { get; protected set; }
 
         /// <summary>
         /// Gets or sets the message associated with the response.
         /// </summary>
-        public string Message { get; set; }
+        public string Message { get; protected set; }
 
         /// <summary>
         /// Gets or sets the response data.
         /// </summary>
-        public TResponseData ResponseData { get; set; }
+        public TResponseData ResponseData { get; protected set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the response succeeded.
         /// </summary>
-        public bool Succeeded { get; set; }
+        public bool Succeeded { get; protected set; }
 
         /// <summary>
         /// Gets or sets the timestamp of the response.
         /// </summary>
-        public DateTime TimeStamp { get; set; }
+        public DateTime TimeStamp { get; protected set; }
 
         /// <summary>
         /// Handles an error response with the specified message.

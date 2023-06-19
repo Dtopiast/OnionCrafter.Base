@@ -9,7 +9,7 @@
     <PackageIcon>JustLogo.png</PackageIcon>
     <RepositoryUrl>https://github.com/Dtopiast/OnionCrafter.Base</RepositoryUrl>
     <PackageTags>DDD onion-arquitecture mediatr automation wrappers response-schemas request-schemas</PackageTags>
-	  <VersionPrefix>1.0.2</VersionPrefix>
+	  <VersionPrefix>1.0.3</VersionPrefix>
     <Authors>Dtopiast</Authors>
     <RepositoryType>git</RepositoryType>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
@@ -19,8 +19,9 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Copyright>Copyright 2023 Dtopiast</Copyright>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
-    <FileVersion>1.0.2</FileVersion>
+    <AssemblyVersion>1.0.3</AssemblyVersion>
+    <FileVersion>1.0.3</FileVersion>
+    <Version>$(VersionPrefix)</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -35,10 +36,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="MediatR" Version="12.0.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
   </ItemGroup>
 

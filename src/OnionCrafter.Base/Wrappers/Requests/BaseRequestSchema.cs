@@ -7,8 +7,19 @@ namespace OnionCrafter.Base.Wrappers.Requests
     /// </summary>
     public enum RequestType
     {
-        NoSpecificate = 0,
+        /// <summary>
+        /// No specific request type specified.
+        /// </summary>
+        None = 0,
+
+        /// <summary>
+        /// Represents a query request.
+        /// </summary>
         Query,
+
+        /// <summary>
+        /// Represents a command request.
+        /// </summary>
         Command
     }
 
@@ -26,7 +37,6 @@ namespace OnionCrafter.Base.Wrappers.Requests
          where TRequestData : IRequestData
          where TKey : notnull, IEquatable<TKey>, IComparable<TKey>
 
-
     {
         /// <summary>
         /// Represents the feature call and its corresponding implementation names.
@@ -38,7 +48,7 @@ namespace OnionCrafter.Base.Wrappers.Requests
         /// </summary>
         protected readonly Dictionary<RequestType, string> _featureImplementationNames = new Dictionary<RequestType, string>()
         {
-           {RequestType.NoSpecificate, "Async" },
+           {RequestType.None, "Async" },
            {RequestType.Query, "Query"},
            {RequestType.Command, "Command"}
         };
@@ -87,14 +97,7 @@ namespace OnionCrafter.Base.Wrappers.Requests
         public bool SetFeatureCall()
         {
             string nameOfClass = GetType().Name;
-            foreach ((var key, string value) in _featureImplementationNames)
-            {
-                if (nameOfClass.Contains(value))
-                {
-                    featureCall = nameOfClass.Replace(value, string.Empty);
-                    RequestType = key;
-                }
-            }
+            SetFeatureCall(nameOfClass);
             return true;
         }
 
@@ -107,6 +110,14 @@ namespace OnionCrafter.Base.Wrappers.Requests
         public bool SetFeatureCall(string name)
         {
             featureCall = name;
+            foreach ((var key, string value) in _featureImplementationNames)
+            {
+                if (name.Contains(value))
+                {
+                    featureCall.Replace(value, string.Empty);
+                    RequestType = key;
+                }
+            }
             return true;
         }
 
@@ -128,17 +139,32 @@ namespace OnionCrafter.Base.Wrappers.Requests
         public void CopyTo(IRequestSchema<TKey, TResponseSchema, TReturnData, TRequestData> toCopy)
         {
             toCopy.ActionId = ActionId;
-            toCopy.RequestData = RequestData;
-            toCopy.RequestType = RequestType;
+            toCopy.SetRequestData(RequestData);
+            toCopy.SetRequestType(RequestType);
         }
 
         /// <summary>
-        /// Copies the values of this request schema to the given ResponseSchema.
+        /// Copies the values of this request schema to the given TResponseSchema.
         /// </summary>
         public void CopyTo(TResponseSchema toCopy)
         {
-            toCopy.FeatureCall = featureCall;
+            toCopy.SetFeatureCall(featureCall);
             toCopy.ActionId = ActionId;
         }
+
+        /// <inheritdoc/>
+        public void SetRequestType(RequestType requestType)
+        {
+            RequestType = requestType;
+        }
+
+        /// <inheritdoc/>
+        public void SetActionId(TKey key)
+        {
+            ActionId = key;
+        }
+
+        /// <inheritdoc/>
+        public abstract void CreateActionId();
     }
 }

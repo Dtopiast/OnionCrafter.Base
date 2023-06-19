@@ -19,12 +19,12 @@ namespace OnionCrafter.Base.Wrappers.Requests
         /// <summary>
         /// Gets or sets the request data.
         /// </summary>
-        TRequestData RequestData { get; set; }
+        TRequestData RequestData { get; protected set; }
 
         /// <summary>
         /// Gets or sets the type of the request.
         /// </summary>
-        public RequestType RequestType { get; set; }
+        public RequestType RequestType { get; protected set; }
 
         /// <summary>
         /// Gets the feature of the request.
@@ -51,5 +51,13 @@ namespace OnionCrafter.Base.Wrappers.Requests
         /// <param name="name">The name of the feature call to set.</param>
         /// <returns>True if the feature call was set successfully; otherwise, false.</returns>
         public bool SetFeatureCall(string name);
+
+        /// <summary>
+        /// Sets the request type call of the request with a specific type.
+        /// </summary>
+        /// <param name="requestType">The type of the feature call to set.</param>
+        /// <returns>True if the feature call was set successfully; otherwise, false.</returns>
+
+        void SetRequestType(RequestType requestType);
     }
 }

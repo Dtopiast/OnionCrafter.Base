@@ -54,12 +54,18 @@
         /// </summary>
         public DateTime TimeStamp { get; set; }
 
+        /// <summary>
+        /// Sets the error response message and returns the response schema instance.
+        /// </summary>
+        /// <param name="message">The error message.</param>
+        /// <returns>The response schema instance.</returns>
         public virtual IResponseSchema<TKey, TResponseData> ErrorResponse(string message)
         {
             if (message == string.Empty)
                 Message = "Error";
             else
                 Message = message;
+
             return this;
         }
 
@@ -129,5 +135,14 @@
                 Message = message;
             return this;
         }
+
+        /// <inheritdoc/>
+        public void SetActionId(TKey key)
+        {
+            ActionId = key;
+        }
+
+        /// <inheritdoc/>
+        public abstract void CreateActionId();
     }
 }
