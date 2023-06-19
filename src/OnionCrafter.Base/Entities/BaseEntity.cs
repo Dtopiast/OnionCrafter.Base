@@ -7,9 +7,7 @@
     public abstract class BaseEntity<TKey> : IEntity<TKey>
     where TKey : notnull, IEquatable<TKey>, IComparable<TKey>
     {
-        /// <summary>
-        /// Gets or sets the entity's key.
-        /// </summary>
+        /// <inheritdoc/>
         public virtual TKey Id { get; set; }
 
         /// <summary>
@@ -18,6 +16,15 @@
         protected BaseEntity()
         {
             Id = Activator.CreateInstance<TKey>();
+        }
+
+        /// <inheritdoc/>
+        public abstract void CreateRandomId();
+
+        /// <inheritdoc/>
+        public void SetId(TKey key)
+        {
+            Id = key;
         }
     }
 

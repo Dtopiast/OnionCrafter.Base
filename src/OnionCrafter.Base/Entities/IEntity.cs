@@ -12,6 +12,17 @@
         /// Gets or sets the unique identifier of the entity.
         /// </summary>
         public TKey Id { get; set; }
+
+        /// <summary>
+        /// Creates a random unique identifier for the entity.
+        /// </summary>
+        public abstract void CreateRandomId();
+
+        /// <summary>
+        /// Sets the unique identifier of the entity.
+        /// </summary>
+        /// <param name="key">The value of the unique identifier.</param>
+        public abstract void SetId(TKey key);
     }
 
     /// <summary>
