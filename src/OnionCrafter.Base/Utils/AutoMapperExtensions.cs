@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using OnionCrafter.Base.DTOs;
-using OnionCrafter.Base.Entities;
+using OnionCrafter.Base.DTOs.General;
+using OnionCrafter.Base.Entities.General;
 
 namespace OnionCrafter.Base.Utils
 {

@@ -1,5 +1,5 @@
-﻿using OnionCrafter.Base.DTOs;
-using OnionCrafter.Base.Wrappers.Responses;
+﻿using OnionCrafter.Base.DTOs.General.Implementations;
+using OnionCrafter.Base.Wrappers.Responses.General;
 
 namespace OnionCrafter.Base.Utils
 {

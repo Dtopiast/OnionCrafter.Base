@@ -1,4 +1,6 @@
-﻿namespace OnionCrafter.Base.Wrappers.Responses.Paged
+﻿using OnionCrafter.Base.Wrappers.Responses.General;
+
+namespace OnionCrafter.Base.Wrappers.Responses.Paged
 {
     /// <summary>
     /// Represents a paged response schema. Implements the <see cref="IResponseSchema{TKey, TResponseData}"/> interface.
