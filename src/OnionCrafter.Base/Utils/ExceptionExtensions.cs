@@ -29,7 +29,7 @@
         /// <param name="prop">The object to check for null.</param>
         /// <returns>The object if it is not null.</returns>
         /// <exception>Thrown when the object is null.</exception>
-        public static T ThrowIfNull<T, TException>(this T prop)
+        public static T ThrowIfNull<T, TException>(this T? prop)
             where TException : Exception
         {
             if (prop is null)
